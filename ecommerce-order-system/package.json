@@ -1,0 +1,24 @@
+{
+  "name": "ecommerce-order-processing-system",
+  "version": "1.0.0",
+  "description": "E-commerce Order Processing System with a self-built persistent, priority background job queue (no third-party queue libraries).",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test src/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=20.6.0"
+  },
+  "dependencies": {
+    "express": "^4.22.2"
+  },
+  "license": "ISC",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [],
+  "author": ""
+}

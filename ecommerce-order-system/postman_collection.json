@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "E-Commerce Order Processing",
+    "description": "Postman Collection for E-commerce Order Processing System (Machine Test)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["health"]
+        }
+      }
+    },
+    {
+      "name": "2. Get Workers Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/workers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["workers"]
+        }
+      }
+    },
+    {
+      "name": "3. Create Order",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": {\n    \"name\": \"John Doe\",\n    \"email\": \"john@example.com\"\n  },\n  \"items\": [\n    {\n      \"productId\": \"PROD-1\",\n      \"quantity\": 2,\n      \"price\": 100\n    }\n  ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/orders",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["orders"]
+        }
+      }
+    },
+    {
+      "name": "4. Get System Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/metrics",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["metrics"]
+        }
+      }
+    },
+    {
+      "name": "5. Get Job Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/jobs/YOUR_JOB_ID_HERE",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["jobs", "YOUR_JOB_ID_HERE"]
+        },
+        "description": "Replace YOUR_JOB_ID_HERE with an actual Job ID from the terminal logs."
+      }
+    },
+    {
+      "name": "6. Retry Failed Job",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/jobs/YOUR_JOB_ID_HERE/retry",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["jobs", "YOUR_JOB_ID_HERE", "retry"]
+        }
+      }
+    },
+    {
+      "name": "7. Cancel Job",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/jobs/YOUR_JOB_ID_HERE/cancel",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["jobs", "YOUR_JOB_ID_HERE", "cancel"]
+        }
+      }
+    }
+  ]
+}

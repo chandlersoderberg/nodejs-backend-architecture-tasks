@@ -1,0 +1,8 @@
+export const JobStatus = Object.freeze({
+  PENDING: 'PENDING',
+  RUNNING: 'RUNNING',
+  COMPLETED: 'COMPLETED',
+  FAILED: 'FAILED',
+  RETRIED: 'RETRIED',
+  CANCELLED: 'CANCELLED',
+});

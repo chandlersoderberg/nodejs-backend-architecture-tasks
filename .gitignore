@@ -1,0 +1,14 @@
+node_modules/
+.env
+.DS_Store
+
+# ecommerce-order-system ignores
+ecommerce-order-system/data/orders.json
+ecommerce-order-system/data/jobs.json
+ecommerce-order-system/logs/
+ecommerce-order-system/npm-debug.log*
+
+# video-transcode-queue ignores
+video-transcode-queue/uploads/
+video-transcode-queue/storage/
+video-transcode-queue/test_video.mp4
