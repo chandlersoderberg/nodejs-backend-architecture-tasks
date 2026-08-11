@@ -1,0 +1,137 @@
+{
+  "info": {
+    "name": "Video Transcode Queue",
+    "description": "Postman Collection for Video Transcoding System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Upload Video",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "video",
+              "type": "file",
+              "src": []
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:3000/api/videos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videos"
+          ]
+        },
+        "description": "Go to Body -> form-data -> check the 'video' key -> click 'Select Files' and choose an .mp4 file."
+      }
+    },
+    {
+      "name": "2. Get All Videos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/videos",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "3. Get Video Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/videos/YOUR_VIDEO_ID_HERE",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videos",
+            "YOUR_VIDEO_ID_HERE"
+          ]
+        }
+      }
+    },
+    {
+      "name": "4. Get Stream Info",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/videos/YOUR_VIDEO_ID_HERE/stream-info",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "videos",
+            "YOUR_VIDEO_ID_HERE",
+            "stream-info"
+          ]
+        }
+      }
+    },
+    {
+      "name": "5. Get Workers Status",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/workers",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "workers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "6. Get Metrics",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/api/metrics",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "api",
+            "metrics"
+          ]
+        }
+      }
+    }
+  ]
+}

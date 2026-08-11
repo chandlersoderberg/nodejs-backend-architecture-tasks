@@ -1,0 +1,8 @@
+node_modules
+.env
+database/app.db
+uploads/*
+!uploads/.gitkeep
+storage/hls/*
+!storage/hls/.gitkeep
+npm-debug.log
