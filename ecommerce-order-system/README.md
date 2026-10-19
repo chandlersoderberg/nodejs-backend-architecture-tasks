@@ -281,7 +281,7 @@ Create an order. Synchronous: validates, saves the order, queues 5 jobs, returns
 ```json
 // Request
 {
-  "customer": { "name": "John Smith", "email": "priya@example.com" },
+  "customer": { "name": "John Smith", "email": "alex@example.com" },
   "items": [{ "productId": "p1", "quantity": 2, "price": 499 }]
 }
 // 201 Response

@@ -71,7 +71,7 @@ describe('API', () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        customer: { name: 'Alex', email: 'priya@test.com' },
+        customer: { name: 'Alex', email: 'alex@test.com' },
         items: [{ productId: 'p1', quantity: 1, price: 999 }],
       }),
     });
@@ -96,7 +96,7 @@ describe('API', () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        customer: { name: 'Taylor', email: 'amit@test.com' },
+        customer: { name: 'Taylor', email: 'taylor@test.com' },
         items: [{ productId: 'p2', quantity: 1, price: 100 }],
       }),
     });
@@ -113,7 +113,7 @@ describe('API', () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        customer: { name: 'Sam', email: 'sneha@test.com' },
+        customer: { name: 'Sam', email: 'sam@test.com' },
         items: [{ productId: 'p3', quantity: 1, price: 50 }],
       }),
     });
